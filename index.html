@@ -17,75 +17,38 @@
       margin-bottom: 0.5em;
     }
 
-    .nft-img {
+    .nft-img, .poisson-img {
       max-width: 300px;
       border-radius: 20px;
       box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
-    }
-
-    #checkBtn {
-      margin-top: 30px;
-      padding: 15px 30px;
-      font-size: 1.2em;
-      background-color: #5d00ff;
-      color: white;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    #checkBtn:hover {
-      background-color: #3700b3;
-    }
-
-    #result {
-      margin-top: 40px;
-      display: none;
-    }
-
-    #poisson {
       margin-top: 20px;
-      max-width: 300px;
     }
 
-    .fade-in {
-      animation: fadeIn 1s ease-in-out forwards;
+    .poisson-section {
+      margin-top: 50px;
+      animation: fadeIn 1.5s ease-in-out;
     }
 
     @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
     }
+
+    h2 {
+      color: #00ffcc;
+      margin-top: 30px;
+    }
   </style>
 </head>
 <body>
   <h1>Eclipse ASC Airdrop Checker</h1>
-  <p>Connect your wallet to check if you're eligible for the exclusive $ASC NFT drop.</p>
+  <p>Check your eligibility for the $ASC NFT drop.</p>
   <img class="nft-img" src="https://i.seadn.io/gae/dsoGmHjzZykKFx8FZ7-6X0o4uWy1YIUysvUYutZTcZhEKi5kQv_TVUnTkMHRApAl3xAJiwqqPOqQ9nqlZuw_E-vXy3t7Tv14n7T6?auto=format&w=750" alt="ASC NFT">
-  
-  <br>
-  <button id="checkBtn">Check Eligibility</button>
 
-  <div id="result">
+  <div class="poisson-section">
     <h2>🐟 Poisson d'avril !</h2>
-    <p>Tu y as cru hein ? Pas d'airdrop aujourd’hui... mais tu as bien mérité un petit sourire 😄</p>
-    <img id="poisson" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Poisson_d%27avril_001.jpg/640px-Poisson_d%27avril_001.jpg" alt="Poisson d'avril">
+    <p>Y'a pas d'airdrop aujourd’hui... mais avoue que tu y as cru 😄</p>
+    <img class="poisson-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Poisson_d%27avril_001.jpg/640px-Poisson_d%27avril_001.jpg" alt="Poisson d'avril">
   </div>
-
-  <script>
-    const btn = document.getElementById('checkBtn');
-    const result = document.getElementById('result');
-
-    btn.addEventListener('click', () => {
-      btn.disabled = true;
-      btn.textContent = 'Checking...';
-      setTimeout(() => {
-        result.style.display = 'block';
-        result.classList.add('fade-in');
-        btn.style.display = 'none';
-      }, 2000);
-    });
-  </script>
 </body>
 </html>
